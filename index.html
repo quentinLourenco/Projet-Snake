@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Snake HTML Game</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <canvas width="400" height="400" id="game"></canvas>
+  <div id="score">Score: 0</div>
+  <div id="game-over" style="display: none;">
+    <h1>Game Over</h1>
+    <p id="final-score"></p>
+  </div>
+  <button id="replay" style="display: none;">Rejouer</button>
+  
+  <div id="new-highscore" style="display: none;">
+    <h2>Nouvelle Meilleure Score!</h2>
+    <form id="highscore-form">
+      <label for="pseudo">Entrez votre pseudo (6-20 caractères) :</label>
+      <input type="text" id="pseudo" name="pseudo" minlength="6" maxlength="20" required>
+      <button type="submit">Soumettre</button>
+    </form>
+    <p id="form-error" style="color: red; display: none;">Pseudo doit être entre 6 et 20 caractères.</p>
+  </div>
+  
+  <div id="highscores" style="display: none;">
+    <h2>Highscores</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Top</th>
+          <th>Pseudo</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="highscore-table">
+      </tbody>
+    </table>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
